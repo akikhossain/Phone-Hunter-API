@@ -16,8 +16,21 @@
     <header>
       <h1>Hello Boys</h1>
     </header>
-    <main>
-      <section class="container mx-auto">
+    <main class="container mx-auto">
+      <section>
+        <h1 class="text-center font-semibold text-4xl mb-8">
+          Search your phone
+        </h1>
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search your phone...."
+          class="input input-bordered w-full max-w-xs mb-12"
+        />
+        <button onclick="handleClick()" class="btn btn-primary">Search</button>
+      </section>
+
+      <section>
         <div
           id="phone-container"
           class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
