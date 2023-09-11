@@ -39,13 +39,25 @@ const displayPhones = (phones) => {
   </div>`;
     phoneHunter.appendChild(phoneCard);
   });
+
+  toggleLoadingSpinner(false);
 };
 
 const handleClick = () => {
+  toggleLoadingSpinner(true);
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
 
   searchField.value = "";
   loadPhone(searchText);
+};
+
+const toggleLoadingSpinner = (isLoading) => {
+  const loadingSpinner = document.getElementById("spin-container");
+  if (isLoading) {
+    loadingSpinner.classList.remove("hidden");
+  } else {
+    loadingSpinner.classList.add("hidden");
+  }
 };
 // loadPhone();
