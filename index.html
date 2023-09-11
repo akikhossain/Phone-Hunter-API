@@ -14,10 +14,25 @@
   </head>
   <body>
     <header>
-      <h1>Hello Boys</h1>
+      <nav></nav>
     </header>
+
     <main class="container mx-auto">
-      <section>
+      <section class="text-center mb-16 mt-12">
+        <h1 class="text-6xl text-center mb-6 font-bold">
+          Your One-Stop Shop for Every Smartphone!
+        </h1>
+        <p class="text-center text-xl mb-8">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority <br />
+          have suffered alteration in some form, by injected humou.
+        </p>
+        <button class="btn btn-primary">Buy Now</button>
+      </section>
+      <div class="text-center">
+        <img src="./images/Group.png" alt="" />
+      </div>
+      <section class="text-center">
         <h1 class="text-center font-semibold text-4xl mb-8">
           Search your phone
         </h1>
@@ -25,7 +40,7 @@
           id="search-field"
           type="text"
           placeholder="Search your phone...."
-          class="input input-bordered w-full max-w-xs mb-12"
+          class="input input-bordered mb-12 w-[752px]"
         />
         <button onclick="handleClick()" class="btn btn-primary">Search</button>
       </section>
@@ -34,23 +49,9 @@
         <div
           id="phone-container"
           class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-        >
-          <!-- <div class="card w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img
-                src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                class="rounded-xl"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div> -->
+        ></div>
+        <div id="hidden-container" class="hidden text-center">
+          <button class="btn btn-primary mt-12">Show All</button>
         </div>
       </section>
     </main>
