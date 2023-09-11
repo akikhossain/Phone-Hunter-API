@@ -36,7 +36,7 @@ const displayPhones = (phones, isShowAll) => {
     <h2 class="card-title">${phone.phone_name}</h2>
     <p>There are many variations of passages of available, but the majority have suffered</p>
     <div class="card-actions">
-      <button class="btn btn-primary">Show Details</button>
+      <button onclick="showDetails('${phone.slug}')" class="btn btn-primary">Show Details</button>
     </div>
   </div>`;
     phoneHunter.appendChild(phoneCard);
@@ -63,5 +63,23 @@ const toggleLoadingSpinner = (isLoading) => {
 
 const handleShowAll = () => {
   handleClick(true);
+};
+
+const showDetails = async (id) => {
+  console.log("show details clickedddd", id);
+  const res = await fetch(
+    `https://openapi.programming-hero.com/api/phone/${id}`
+  );
+  const data = await res.json();
+  const phone = data.data;
+  showDetailsModal(phone);
+};
+
+const showDetailsModal = (phone) => {
+  console.log(phone);
+
+  const phoneName = document.getElementById("show-detail-phone-name");
+  phoneName.innerHTML = phone.name;
+  show_details_modal.showModal();
 };
 // loadPhone();

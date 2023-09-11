@@ -79,6 +79,24 @@
           </button>
         </div>
       </section>
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+
+        <dialog id="show_details_modal" class="modal">
+          <div class="modal-box">
+            <h3 id="show-detail-phone-name" class="font-bold text-lg">
+              Hello!
+            </h3>
+            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
     </main>
     <footer class="bg-slate-100 mt-28">
       <footer class="footer grid-rows-2 p-10 text-black text-neutral-content">
