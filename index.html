@@ -25,12 +25,19 @@
       }
     </style>
   </head>
-  <body class="font-poppins">
+  <body class="font-poppins container mx-auto">
     <header>
-      <nav></nav>
+      <nav class="flex justify-between items-center mt-12">
+        <div>
+          <h1 class="font-bold text-2xl">Hot Gadgets</h1>
+        </div>
+        <div>
+          <button class="btn btn-primary font-bold text-xl">Sign Up</button>
+        </div>
+      </nav>
     </header>
 
-    <main class="container mx-auto">
+    <main>
       <section class="text-center mb-16 mt-12">
         <h1 class="text-6xl text-center mb-6 font-bold">
           Your One-Stop Shop for Every Smartphone!
@@ -73,6 +80,51 @@
         </div>
       </section>
     </main>
+    <footer class="bg-slate-100 mt-28">
+      <footer class="footer grid-rows-2 p-10 text-black text-neutral-content">
+        <nav>
+          <header class="footer-title">Services</header>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <header class="footer-title">Company</header>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <header class="footer-title">Legal</header>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <nav>
+          <header class="footer-title">Social</header>
+          <a class="link link-hover">Twitter</a>
+          <a class="link link-hover">Instagram</a>
+          <a class="link link-hover">Facebook</a>
+          <a class="link link-hover">Github</a>
+        </nav>
+        <nav>
+          <header class="footer-title">Explore</header>
+          <a class="link link-hover">Features</a>
+          <a class="link link-hover">Enterprise</a>
+          <a class="link link-hover">Security</a>
+          <a class="link link-hover">Pricing</a>
+        </nav>
+        <nav>
+          <header class="footer-title">Apps</header>
+          <a class="link link-hover">Mac</a>
+          <a class="link link-hover">Windows</a>
+          <a class="link link-hover">iPhone</a>
+          <a class="link link-hover">Android</a>
+        </nav>
+      </footer>
+    </footer>
     <script src="phone.js"></script>
   </body>
 </html>
