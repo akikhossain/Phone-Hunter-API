@@ -66,7 +66,6 @@ const handleShowAll = () => {
 };
 
 const showDetails = async (id) => {
-  console.log("show details clickedddd", id);
   const res = await fetch(
     `https://openapi.programming-hero.com/api/phone/${id}`
   );
@@ -76,8 +75,13 @@ const showDetails = async (id) => {
 };
 
 const showDetailsModal = (phone) => {
-  console.log(phone);
-
+  const showDetailContainer = document.getElementById("show-detail-container");
+  showDetailContainer.innerHTML = `<img src="${phone.image}" alt="" />
+  <p class="mt-6 mb-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+  <p><span class="font-bold">Storage: </span>${phone?.mainFeatures?.storage}</p>
+  <p><span class="font-bold">GPS: </span> ${
+    phone.others?.GPS ? phone.others.GPS : "No GPS available in this device"
+  }</p>`;
   const phoneName = document.getElementById("show-detail-phone-name");
   phoneName.innerHTML = phone.name;
   show_details_modal.showModal();
