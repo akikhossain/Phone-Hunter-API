@@ -78,8 +78,25 @@ const showDetailsModal = (phone) => {
   const showDetailContainer = document.getElementById("show-detail-container");
   showDetailContainer.innerHTML = `<img src="${phone.image}" alt="" />
   <p class="mt-6 mb-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-  <p><span class="font-bold">Storage: </span>${phone?.mainFeatures?.storage}</p>
-  <p><span class="font-bold">GPS: </span> ${
+  <p class="mb-4"><span class="font-bold">Storage: </span>${
+    phone?.mainFeatures?.storage
+  }</p>
+  <p class="mb-4"><span class="font-bold">Display Size: </span>${
+    phone?.mainFeatures?.displaySize
+  }</p>
+  <p class="mb-4"><span class="font-bold">Chipset: </span>${
+    phone?.mainFeatures?.chipSet
+  }</p>
+  <p class="mb-4"><span class="font-bold">Memory: </span>${
+    phone?.mainFeatures?.memory
+  }</p>
+  <p class="mb-4"><span class="font-bold">Slug: </span>${phone.slug}</p>
+  <p class="mb-4"><span class="font-bold">Release Date: </span>${
+    phone.releaseDate
+  }</p>
+  <p class="mb-4"><span class="font-bold">Brand: </span>${phone.brand}</p>
+
+  <p class="mb-4"><span class="font-bold">GPS: </span> ${
     phone.others?.GPS ? phone.others.GPS : "No GPS available in this device"
   }</p>`;
   const phoneName = document.getElementById("show-detail-phone-name");
